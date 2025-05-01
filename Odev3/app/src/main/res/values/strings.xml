@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Shopping Center</string>
+    <string name="ozellik_basligi">Features</string>
+    <string name="urun_fiyat">$ 895</string>
+    <string name="buttonYazi">ADD TO CART</string>
+    <string name="urun_aciklama">LENOVO IdeaPad Flex 5/AMD Ryzen 7 5700U/ 16GB Ram/ 512GB SSD/ 14&quot;/ Laptop W11/82R900GNTX</string>
+    <string name="product_features">📱 Screen: 14 inç"
+⚙️ Processor: AMD Ryzen 7 5700U
+💾 RAM: 16GB
+💽 Storage: 512GB SSD
+💻 Operating System: Windows 11</string>
+</resources>
