@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todoapplication.ui.fragment.HomeFragment"
+        android:label="Anasayfa"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_add"
+            app:destination="@id/addFragment" />
+
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.todoapplication.ui.fragment.AddFragment"
+        android:label="Ekle"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.todoapplication.ui.fragment.DetailFragment"
+        android:label="Detay"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="todo"
+            app:argType="com.example.todoapplication.data.entity.ToDo"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>
