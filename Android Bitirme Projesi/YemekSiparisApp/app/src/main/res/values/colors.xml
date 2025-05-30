@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FFA500</color>
+    <color name="primary">#EFEEEA</color> <!-- Hooker's Green -->
+    <color name="primaryVariant">#354F52</color> <!-- Dark Slate Gray -->
+    <color name="secondary">#84A98C</color> <!-- Cambridge Blue -->
+    <color name="background">#CAD2C5</color> <!-- Ash Gray -->
+    <color name="surface">#FFFFFF</color> <!-- White surface -->
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="onBackground">#2F3E46</color> <!-- Charcoal -->
+    <color name="onSurface">#000000</color>
+
+</resources>

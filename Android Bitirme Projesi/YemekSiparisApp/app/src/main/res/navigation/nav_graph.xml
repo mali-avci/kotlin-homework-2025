@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.yemeksiparisapp.ui.fragment.HomeFragment"
+        android:label="Anasayfa"
+        tools:layout="@layout/fragment_home">
+
+        <!-- Home -> Detail -->
+        <action
+            android:id="@+id/action_nav_home_to_detailFragment"
+            app:destination="@id/detailFragment">
+            <argument
+                android:name="yemek"
+                app:argType="com.example.yemeksiparisapp.data.model.Yemek"
+                app:nullable="false" />
+        </action>
+
+        <!-- Home -> Sepet -->
+        <action
+            android:id="@+id/action_nav_home_to_sepetFragment"
+            app:destination="@id/nav_cart" />
+    </fragment>
+
+    <!-- Detail Fragment -->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.yemeksiparisapp.ui.fragment.DetailFragment"
+        android:label="Detay"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="yemek"
+            app:argType="com.example.yemeksiparisapp.data.model.Yemek"
+            app:nullable="false" />
+    </fragment>
+
+    <!-- Sepet Fragment -->
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.yemeksiparisapp.ui.fragment.SepetFragment"
+        android:label="Sepet"
+        tools:layout="@layout/fragment_sepet" />
+
+    <!-- Favoriler Fragment -->
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.yemeksiparisapp.ui.fragment.FavoritesFragment"
+        android:label="Favoriler"
+        tools:layout="@layout/fragment_favorites" />
+
+    <!-- Profil Fragment -->
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.yemeksiparisapp.ui.fragment.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

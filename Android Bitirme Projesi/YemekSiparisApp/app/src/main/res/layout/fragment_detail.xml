@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="16dp"
+    tools:context=".ui.fragment.DetailFragment">
+
+    <!-- Yemek Görseli -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImage"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewYemek"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Yemek Adı -->
+    <TextView
+        android:id="@+id/textViewYemekAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Yemek Adı"
+        android:textColor="#000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewImage" />
+
+    <!-- Yemek Fiyatı -->
+    <TextView
+        android:id="@+id/textViewYemekFiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="25 ₺"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewYemekAd" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutMiktarKontrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYemekFiyat">
+
+        <Button
+            android:id="@+id/buttonAzalt"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="−"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF9F00"
+            android:layout_marginEnd="16dp"
+            app:cornerRadius="28dp" />
+
+        <TextView
+            android:id="@+id/textViewAdet"
+            android:layout_width="64dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@drawable/adet_background"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+
+        <Button
+            android:id="@+id/buttonArttir"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="+"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF9F00"
+            android:layout_marginStart="16dp"
+            app:cornerRadius="28dp" />
+
+    </LinearLayout>
+
+    <!-- Sepete Ekle Butonu -->
+    <Button
+        android:id="@+id/buttonSepeteEkle"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#FF9F00"
+        android:text="Sepete Ekle"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMiktarKontrol" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

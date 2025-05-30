@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Yemek Görseli -->
+        <ImageView
+            android:id="@+id/imageViewYemek"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Yemek Görseli" />
+
+        <!-- Kalp Ikonu -->
+        <ImageButton
+            android:id="@+id/buttonFavori"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_favori_border"
+            android:src="@drawable/ic_favorite_border"
+            android:contentDescription="Favori" />
+
+
+
+
+        <!-- İçerik Alanı -->
+        <LinearLayout
+            android:layout_below="@id/imageViewYemek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/textViewYemekAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Izgara Somon"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/onBackground" />
+
+            <TextView
+                android:id="@+id/textViewUcretsizGonderim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚴‍♂️ Ücretsiz Gönderim"
+                android:textSize="12sp"
+                android:textColor="@color/secondary" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/textViewYemekFiyat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₺ 25"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primaryVariant" />
+
+                <!-- Sepete Ekle Butonu -->
+                <ImageButton
+                    android:id="@+id/buttonSepeteEkle"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_circle_button"
+                    android:src="@drawable/ic_add"
+                    android:contentDescription="Sepete Ekle"
+                    android:tint="@android:color/white"
+                    android:visibility="visible" />
+
+                <!-- ➕➖ Adet Kontrolü (ilk başta görünmez) -->
+                <LinearLayout
+                    android:id="@+id/adetKontrolLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/buttonSepeteEkle"
+                    android:layout_toStartOf="@id/buttonSepeteEkle"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/buttonAzalt"
+                        android:layout_width="28dp"
+                        android:layout_height="32dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Azalt"
+                        android:src="@drawable/ic_remove"
+                        android:tint="@color/primaryVariant" />
+
+                    <TextView
+                        android:id="@+id/textViewAdet"
+                        android:layout_width="20dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/buttonArttir"
+                        android:layout_width="28dp"
+                        android:layout_height="32dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Arttır"
+                        android:src="@drawable/ic_add"
+                        android:tint="@color/primaryVariant" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
